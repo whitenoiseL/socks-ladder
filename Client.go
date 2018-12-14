@@ -9,7 +9,7 @@ type LsLocal struct {
 	*SecureSocket
 }
 
-func New(password *Password, listenAddr, remoteAddr *net.TCPAddr) *LsLocal{
+func NewLsLocal(password *Password, listenAddr, remoteAddr *net.TCPAddr) *LsLocal{
 	return &LsLocal{
 		SecureSocket: &SecureSocket{
 			Cipher: NewCipher(password),
